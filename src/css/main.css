@@ -1,0 +1,114 @@
+/* Modified on: Oct 08 2017 19:01 */
+/* 	Make all edits to this file through the scss files 
+	in the git repository */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+.grocery-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grocery-app .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.grocery-app .App-title {
+  font-size: 1.5em;
+}
+
+.grocery-app .App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reviews {
+  padding: 10px;
+}
+
+.reviews .rating {
+  display: inline-block;
+  height: 25px;
+  width: 130px;
+  margin: 0px 10px;
+}
+
+.reviews .rating .star {
+  color: #666666;
+}
+
+.reviews .rating .star.star--filled {
+  color: #cc0000;
+}
+
+.reviews .overall-review {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.reviews .overall-review span {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.reviews .overall-review span a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.reviews .overall-review span a:hover, .reviews .overall-review span a:focus {
+  text-decoration: underline;
+}
+
+.comment-header {
+  padding: 15px 10px;
+  background: #f6f5f5;
+}
+
+.comment-header h3 {
+  margin: 0px;
+  font-family: "Myriad Pro", Myriad, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.comment-header h4 {
+  margin: 0px;
+}
+
+.comment-header p {
+  font-size: 12px;
+  margin: 0px;
+  padding-bottom: 10px;
+  color: #666666;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.comment {
+  background: #f6f5f5;
+  overflow: hidden;
+  padding: 10px;
+  flex-grow: 1;
+}

@@ -1,0 +1,1 @@
+// product detail component with image and desciptions (could break this down further)

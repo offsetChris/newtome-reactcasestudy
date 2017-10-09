@@ -1,0 +1,15 @@
+.rating{
+	// background:$target-red;
+	display:inline-block;
+	height:25px;
+	width:130px;
+	margin:0px 10px;
+
+	.star{
+		color:$grey-med;
+
+		&.star--filled{
+			color:$target-red;
+		}
+	}
+}

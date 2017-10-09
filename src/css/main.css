@@ -1,4 +1,4 @@
-/* Modified on: Oct 08 2017 19:01 */
+/* Modified on: Oct 08 2017 20:50 */
 /* 	Make all edits to this file through the scss files 
 	in the git repository */
 body {
@@ -111,4 +111,11 @@ body {
   overflow: hidden;
   padding: 10px;
   flex-grow: 1;
+}
+
+.image-viewer--thumbnails img {
+  height: 20px;
+  width: 30px;
+  display: inline;
+  margin: 0px 10px;
 }

@@ -20,4 +20,4 @@ test:
       paths:
         - public
     only:
-      -master #runs only on master branch
+      - master #runs only on master branch

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './css/main.css';
+import './css/font-awesome.css';
 import Stars from './components/starComponent.js';
 // import Button from './components/button.js';
 import Product from './components/productComponent.js';

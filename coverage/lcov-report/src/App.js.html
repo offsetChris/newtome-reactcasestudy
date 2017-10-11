@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/App.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">src</a> App.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/13</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import logo from './logo.svg'; // XX comment this out when dev starts
+import './css/main.css';
+import Stars from './components/starComponent.js';
+// import FontAwesome from 'react-fontawesome';
+import appdata from './api/item-data.json';
+import FontAwesome from 'react-fontawesome';
+&nbsp;
+// components to break apart:
+// CatalogEntryView contains entirety of app
+//  CustomerReview displays and filters comments best/worst
+// product image
+&nbsp;
+&nbsp;
+// star component
+&nbsp;
+function Reviews(props){
+  // const catalog = appdata.CatalogEntryView[0];
+  // const reviews = catalog.CustomerReview[0];
+  console.log(props.reviews)
+  const protitle = props.reviews.Pro[0].title;
+  const proreview = props.reviews.Pro[0].review;
+  const prodate = props.reviews.Pro[0].datePosted;
+  const contitle = props.reviews.Con[0].title;
+  const conreview = props.reviews.Con[0].review;
+  const condate = props.reviews.Con[0].datePosted;
+  return (
+    &lt;div className="reviews"&gt;
+      &lt;OverallReview 
+        rating={props.reviews.consolidatedOverallRating}
+        number={props.reviews.totalReviews} /&gt;
+     
+      &lt;div className="comment-container"&gt;
+        
+        &lt;Comment 
+          heading="Pro" 
+          text="most helpful 4-5 star review"
+          rating={props.reviews.Pro[0].overallRating}
+          title={protitle} 
+          description={proreview} 
+          date={prodate} /&gt;
+        &lt;Comment 
+          heading="Con"
+          text="most helpful 1-2 star review"
+          rating={props.reviews.Con[0].overallRating}
+          title={contitle} 
+          description={conreview} 
+          date={condate} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+&nbsp;
+function OverallReview(props){
+  return (
+    &lt;div className="overall-review"&gt;
+      &lt;div className="rating"&gt;
+        &lt;Stars rating={props.rating} /&gt;
+      &lt;/div&gt;
+      &lt;p&gt;overall&lt;/p&gt;
+      &lt;span&gt;
+        &lt;a href="javascript:void(0);"&gt;view all {props.number} reviews&lt;/a&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  )
+}
+&nbsp;
+// function SetRating(props){
+//   var icons = document.getElementsByClassName('star');
+//   for(var i=0; i &lt; props.rating; i++){
+//     icons[i].className += ' filled';
+//   }
+//   return(
+//     &lt;span className="teststar"&gt;{icons}&lt;/span&gt;
+//   );
+// }
+&nbsp;
+function Comment(props){
+&nbsp;
+  return (
+&nbsp;
+    &lt;div className="comment"&gt;
+      &lt;div className="comment-header"&gt;
+        &lt;h3&gt;{props.heading}&lt;/h3&gt;
+        &lt;p&gt;{props.text}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div className="rating"&gt;
+        &lt;Stars rating={props.rating} /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;{props.title}&lt;/h4&gt;
+      &lt;p&gt;{props.description}&lt;/p&gt;
+      &lt;p className="comment-date"&gt;{props.date}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+&nbsp;
+class App extends Component {
+&nbsp;
+  componentDidMount(){
+    // DCPI = appdata.CatalogEntryView[0].DPCI
+    // const catalog = appdata.CatalogEntryView[0];
+    // const DCPI = catalog.DPCI;
+    // const reviews = catalog.CustomerReview[0];
+&nbsp;
+    // const con = reviews.Con;
+    // const pro = reviews.Pro;
+    // console.log(con);
+&nbsp;
+  }
+&nbsp;
+&nbsp;
+  render() {
+    const catalog = appdata.CatalogEntryView[0];
+    const reviews = catalog.CustomerReview[0];
+    return (
+      &lt;div className="grocery-app"&gt;
+        &lt;section className="product"&gt;
+          &lt;h1 className="product-title"&gt;Product title&lt;/h1&gt;
+          {/*Image display and thumbnails should be in a separate component*/}
+          &lt;img src={logo} className="image-viewer" alt="product title" /&gt;
+          &lt;a className="zoom" href="javascript:void(0);"&gt;
+            &lt;FontAwesome className="zoom-icon" name="search-plus" /&gt;
+          view larger&lt;/a&gt;
+          &lt;div className="image-viewer--thumbnails"&gt;
+            &lt;a href="javascript:void(0);"&gt;&lt;FontAwesome className="left-arrow" name="angle-left" /&gt;&lt;/a&gt;
+            &lt;img src={logo} alt="product title" /&gt;
+            &lt;img src={logo} alt="product title" /&gt;
+            &lt;img src={logo} alt="product title" /&gt;
+            &lt;a href="javascript:void(0);"&gt;&lt;FontAwesome className="left-arrow" name="angle-right" /&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div className="product-info"&gt;
+            &lt;p className="product-price"&gt;$Price &lt;span&gt;online price&lt;/span&gt;&lt;/p&gt;
+            &lt;div className="product-offers"&gt;
+              &lt;a href="target.com" target="_blank"&gt;Link 1&lt;/a&gt;
+              &lt;a href="target.com" target="_blank"&gt;Link 2&lt;/a&gt;
+            &lt;/div&gt;
+            {/* quantity should be a new component */}
+            &lt;div className="quantity"&gt;
+              &lt;span&gt;quantity&lt;/span&gt;
+              &lt;a href="javascript:void(0);"&gt;&lt;FontAwesome className="plus" name="plus" /&gt;&lt;/a&gt;
+              &lt;span&gt;#&lt;/span&gt;
+              &lt;a href="javascript:void(0);"&gt;&lt;FontAwesome className="minus" name="minus" /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div className="cart-buttons"&gt;
+              {/*buttons should be a component passing props*/}
+              &lt;a className="button-secondary" href="javascript:void(0);"&gt;Pick up in store&lt;/a&gt;
+              &lt;p&gt;View in store&lt;/p&gt;
+              &lt;a className="button-primary" href="javascript:void(0);"&gt;Add to cart&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div className="return-policy"&gt;
+              &lt;span&gt;&lt;p&gt;returns&lt;/p&gt;&lt;/span&gt;
+              &lt;span&gt;&lt;p&gt;This item must be returned within 30 days of the ship date. See &lt;a href="target.com"&gt;return policy&lt;/a&gt; for details. Prices, promotions, styles and availability may vary by store and online.&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+&nbsp;
+            &lt;a className="button-secondary" href="javascript:void(0);"&gt;Add to registry&lt;/a&gt;
+            &lt;a className="button-secondary" href="javascript:void(0);"&gt;Add to list&lt;/a&gt;
+            &lt;a className="button-secondary" href="javascript:void(0);"&gt;Share&lt;/a&gt;
+&nbsp;
+            &lt;div className="product-description"&gt;
+              &lt;h3&gt;Product Highlights&lt;/h3&gt;
+            {/* product description component loop through product items and write to li */}
+              &lt;ul&gt;
+                &lt;li&gt;item 1&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;Reviews reviews={reviews} /&gt;
+        
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default App;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 09 2017 10:23:41 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

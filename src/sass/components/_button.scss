@@ -1,0 +1,60 @@
+// Button SASS
+
+// base button for @extend inheritance
+.button{
+	padding:10px 20px; 
+	margin:10px 5px;
+	font-weight:lighter;
+	letter-spacing:0.08em;
+	font-size:1em;
+	text-align:center;
+	display:inline-block;
+	position:relative;
+	text-transform:uppercase;
+	text-decoration:none;
+	border-radius:2px;
+	background:#eee;
+	color:$black;
+
+	
+
+	&--primary{
+		@extend .button;
+		border:1px solid $target-red;
+		@include button-gradient($red-lt,$target-red);
+		// background:$target-red;
+		color:$white;
+		box-shadow:0px 1px 2px rgba(0,0,0,.5);
+
+		&:hover, &:focus{
+			background:$target-red-hover;
+			text-decoration:none;
+		}
+	}
+	&--secondary{
+		@extend .button;
+		@include button-gradient($grey-med,$black);
+		color:$white;
+
+		&:hover,&:focus{
+			// shot in the dark at hover state standards
+			background:#444;
+			text-decoration:none;
+		}
+	}
+	&--grey{
+		@extend .button;
+		background:$grey-lt;
+		color:#444;
+		font-size:12px;
+		font-weight:normal;
+		letter-spacing:0.03em;
+
+		&:hover,&:focus{
+			// shot in the dark at hover/focus state standards
+			background:#ddd;
+			text-decoration:none;
+		}
+	}
+
+}

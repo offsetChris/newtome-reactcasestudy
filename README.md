@@ -1,4 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This is a demo react project created by Christina Adams.
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). For more specifics about the install refer to the readme at this repo.
+
+Create React App comes pre installed with Jest testing scripting capabilities that were explored.
+
+
+
+React app on in a Repository (GitLab or GitHub) > merge/push changes to master branch > automatically triggers build and deploy after tests pass
+
+NPM development environment.
+- npm start
+- npm test
+- npm run build
+- npm run eject
+
+Gulp sass watch and compile task runners.
+- gulp sass
+- gulp watch
+- gulp replace
+
+
+
+Further work needed:
+- [ ] Browser compatibility optimization (for the sake of the demo I built this for the latest version of Chrome and have not focused time on backwards compatibility at this point.)
+- [ ] Break down components further for more modularity
+- [ ] Simplify and optimize functions (use conditional rendering etc)
+- [ ] Optimize data transfers (unsure of standards)
+- [ ] Further expand automated testing (very simple examples of tests currently)
+- [ ] Automate browser and device testing (unsure of what tools are being used)
+- [ ] SASS naming conventions using BEM (currently not consistent with how components are separated, knowledge of an existing styleguide would be helpful)
+- [ ] 
+
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).

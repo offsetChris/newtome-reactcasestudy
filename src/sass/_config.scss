@@ -4,12 +4,21 @@
 $black: #000;
 $white: #fff;
 
+$red-lt:#cc7070;
 $target-red: #cc0000;
+$target-red-hover: #aa0000;
 
+@mixin button-gradient($top,$bottom){
+	background: $bottom; /* Old browsers */
+	background: -moz-linear-gradient(top, $top 0%, $bottom 35%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, $top 0%,$bottom 35%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, $top 0%,$bottom 35%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 // secondary colors
 
 // greys
+$grey-lt:#f3f3f3;
 $grey-lt-bkg: #f6f5f5;
 $grey-med:#666666;
 
@@ -18,3 +27,9 @@ $grey-med:#666666;
 
 $font-helvetica:'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-myriad:'Myriad Pro', Myriad, 'Helvetica Neue', Helvetica, sans-serif;
+
+// Breakpoints
+$phone:					"screen and (max-width:749px)";
+$tablet_portrait: 		"screen and (min-width:750px)";
+$tablet_max:			"screen and (max-width:900px)";
+$desktop:				"screen and (max-width:1062)";

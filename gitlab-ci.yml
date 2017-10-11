@@ -1,0 +1,23 @@
+
+image: node:6.3.0 # change to match your node version
+
+before_script:
+  - npm install
+
+test:
+  stage: test
+  script:
+    - npm test
+
+  pages:
+    stage: deploy
+    script:
+      - npm run build
+      - rm -rf public
+      - mv build public
+
+    artifacts:
+      paths:
+        - public
+    only:
+      -master #runs only on master branch

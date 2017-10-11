@@ -7,34 +7,14 @@ stages:
 
 test:
   stage: test
-  script: CI=true npm test
+  script: npm test
 
 package:
   stage: package
-  script: CI=true npm run build
+  script: npm run build
   artifacts:
     paths:
       - public
   only:
     - master
 
-# before_script:
-#   - npm install
-
-# # test:
-# #   stage: test
-# #   script:
-# #     - npm test
-
-#   pages:
-#     stage: deploy
-#     script:
-#       - npm run build
-#       - rm -rf public
-#       - mv build public
-
-#     artifacts:
-#       paths:
-#         - public
-#     only:
-#       - master #runs only on master branch

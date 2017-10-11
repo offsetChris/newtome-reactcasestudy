@@ -6,12 +6,11 @@ import Stars from './components/starComponent.js';
 import Product from './components/productComponent.js';
 // import FontAwesome from 'react-fontawesome';
 import appdata from './api/item-data.json';
-// import FontAwesome from 'react-fontawesome';
 
 // components to break apart:
 // CatalogEntryView contains entirety of app
 //  CustomerReview displays and filters comments best/worst
-// product image
+// product images
 
 function Reviews(props){
   console.log(props.reviews)

@@ -29,7 +29,8 @@ Further work needed:
 - [ ] Further expand automated testing (very simple examples of tests currently)
 - [ ] Automate browser and device testing (unsure of what tools are being used)
 - [ ] SASS naming conventions using BEM (currently not consistent with how components are separated, knowledge of an existing styleguide would be helpful)
-- [ ] 
+- [ ] Build pipeline is failing in gitlab (did not have time to fully troubleshoot)
+
 
 
 

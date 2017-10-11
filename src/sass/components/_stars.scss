@@ -1,0 +1,20 @@
+.rating{
+	// background:$target-red;
+	display:inline-block;
+	margin:0px 10px 0px 0px;
+
+	.star{
+		color:$grey-med;
+
+		&--filled{
+			color:$target-red;
+		}
+	}
+
+	// Rating > stars nested within the overall-review header appear bigger
+	.overall-review &{
+		.star,.star--filled{
+			font-size:19px;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+/* Modified on: {timestamp} */
+
+/* 	Make all edits to this file through the scss files 
+	in the git repository */
+
+@import "config";
+
+
+// Primary colors
+
+// Secondary colors
+
+// Typography
+
+*{
+	box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-helvetica;
+  color:$black;
+  
+}
+
+a{
+	cursor:pointer;
+	color:$black;
+	text-decoration:none;
+
+	&:hover,&:focus{
+		text-decoration:underline;
+	}
+}
+
+// components
+@import "components/app";
+@import "components/stars";
+@import "components/reviews";
+@import "components/image-viewer";
+@import "components/product";
+@import "components/button";

@@ -1,0 +1,74 @@
+.reviews{
+	// @import 'stars';
+	width:50%;
+	padding:10px;
+
+	@media #{$phone}{
+		width:100%;
+	}
+	.overall-review{
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+		padding:15px;
+		p{
+			margin:0px;
+		}
+		span{
+			text-align:right;
+			flex-grow:1;
+			
+			a{
+				font-weight:bold;
+				color:$black;
+				// hover/focus is covered by default link style in main.
+			}
+		}
+	}
+
+
+}
+// Break these into separate components
+.comment-header{
+	padding:15px 0px;
+	background:$grey-lt-bkg;
+
+	h3{
+		margin:0px;
+		font-family:$font-myriad;
+		font-weight:lighter;
+		text-transform:uppercase;
+	}
+	h4{
+		margin:0px;
+	}
+	p{
+		padding-bottom:10px;
+		border-bottom:1px solid #ccc;
+	}
+}
+
+.comment-container{
+	display:flex;
+	flex-direction:row;
+	align-items:stretch;
+}
+.comment{
+	background:$grey-lt-bkg;
+	overflow:hidden;
+	padding:10px 20px;
+	// flex-grow:1;
+	flex-basis:50%;
+
+	h4{
+		margin:5px 0px;
+		font-size:16px;
+	}
+	p{
+		font-size:12px;
+		margin:0px;
+		color:$grey-med;
+		line-height:18px;
+	}
+	
+}

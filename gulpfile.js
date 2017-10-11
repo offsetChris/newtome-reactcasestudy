@@ -4,6 +4,8 @@ var gulp = require('gulp');
 var watch = require('gulp-watch');
 // require gulp-sass for sass compile
 var sass = require('gulp-sass');
+// require gulp-replace for string replacement
+var replace = require('gulp-replace');
 
 // set sass input and output directories
 var input = 'src/sass/**/*.scss';

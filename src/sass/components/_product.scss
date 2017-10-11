@@ -1,0 +1,191 @@
+// SASS for product component
+.product{
+	display:flex;
+	flex-direction:row;
+	.product-title{
+		font-family:$font-helvetica;
+		font-weight:lighter;
+		font-size:26px;
+		margin-bottom:40px;
+	}
+	.product-price{
+		font-weight:bold;
+		font-size:30px;
+		span{
+			font-size:12px;
+			color:$grey-med;
+			font-weight:normal;
+		}
+	}
+	.product-showcase{
+		text-align:center;
+		flex-basis:50%;
+		position:relative;
+		overflow:hidden;
+		padding:20px;
+
+		>img{
+			width:100%;
+		}
+		.zoom{
+			color:$grey-med;
+			display:inline-block;
+			padding:20px;
+
+			.fa{
+				margin-right:5px;
+			}
+
+			&:hover,&:focus{
+				color:$black;
+			}
+			@media #{$phone}{
+				display:none;
+			}
+		}
+		
+	}
+
+	.product-info{
+		flex-basis:50%;
+		padding:20px;
+		.social-buttons{
+			display:flex;
+			flex-wrap:wrap;
+			a{
+				flex-grow:1;
+			}
+		}
+	}
+	.product-description{
+		h3{
+			font-size:36px;
+			font-weight:normal;
+			margin-bottom:0px;
+			text-transform:lowercase;
+		}
+		ul li{
+			margin:10px;
+			color:$grey-med;
+			font-size:14px;
+		}
+	}
+	.product-promo{
+		color:$target-red;
+		padding:20px 0px;
+		border-top:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+		list-style:none;
+
+		li{
+			margin:10px 0px;
+			position:relative;
+			padding-left:20px;
+
+			&:before{
+				content:'\f02b';
+				font-family:FontAwesome;
+				margin-right:10px;
+				position:absolute;
+				left:0px;
+			}
+		}
+	}
+
+	.cart-buttons{
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.in-store{
+		text-decoration:none;
+		color:$black;
+		width:50%;
+		margin:0 auto;
+		left:12%;
+		position:relative;
+		display:inline-block;
+
+		@media #{$phone}{
+			display:none;
+		}
+	}
+
+	.return-policy{
+		display:flex;
+		align-items:stretch;
+		align-content:center;
+		font-size:14px;
+		.return-title{
+			padding:0px 15px;
+			border-right:1px solid #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.return-description{
+			padding:0px 15px;
+		}
+	}
+	// Should be stand along SASS component
+	.quantity-container{
+		padding:0px 10px;
+		border:1px solid #ccc;
+		position:relative;
+		overflow:hidden;
+		max-width:300px;
+		margin:20px 0px;
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-end;
+		align-items:center;
+		label{
+			padding-right:10px;
+			flex-grow:1;
+			text-align:left;
+			font-size:14px;
+		}
+		input{
+			font-size:1rem;
+			font-family:$font-helvetica;
+			border:none;
+			width:40px;
+			text-align:center;
+			font-weight:bold;
+		}
+
+		button{
+			height:30px;
+			width:30px;
+			margin:5px;
+			background:#ccc;
+			color:$white;
+			text-align:center;
+			border-radius:50%;
+			box-shadow:none;
+			padding:0px;
+			border:none;
+			cursor:pointer;
+			>span.fa{
+				font-size:22px;
+				line-height:30px;
+				text-align:center;
+				vertical-align:baseline;
+				font-weight:normal;
+			}
+
+			&:hover,&:focus{
+				background:$grey-med;
+			}
+		}
+
+	}
+
+	@media #{$phone}{
+		flex-direction:column;
+
+		.product-showcase, .product-info{
+			flex-basis:unset;
+		}
+	}
+
+}

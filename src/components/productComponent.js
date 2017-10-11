@@ -1,8 +1,9 @@
 // product detail component with image and desciptions (could break this down further)
 
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+// import FontAwesome from 'react-fontawesome/lib';
 import Button from './button.js';
+
 
 export default class Product extends React.Component{
 	render(){
@@ -40,12 +41,12 @@ export default class Product extends React.Component{
 	        {/* Image display and thumbnails should be in a separate component */}
 	        <img src={images.PrimaryImage[0].image} className="image-viewer" alt="product title" />
 	        <a className="zoom">
-	          <FontAwesome className="zoom-icon" name="search-plus" />
+	          <i className="zoom-icon fa fa-search-plus"></i>
 	        view larger</a>
 	        <div className="image-viewer--thumbnails">
-	          <a><FontAwesome className="left-arrow" name="angle-left" /></a>
+	          <a><i className="left-arrow fa fa-angle-left"></i></a>
 	          {altImgArray}
-	          <a><FontAwesome className="right-arrow" name="angle-right" /></a>
+	          <a><i className="right-arrow fa fa-angle-right"></i></a>
 	        </div>
 	      </div>
 
@@ -57,9 +58,9 @@ export default class Product extends React.Component{
 	        {/* quantity should be a new component */}
 	        <div className="quantity-container">
 	          <label htmlFor="quantity">quantity:</label>
-	          <button aria-controls="number"><FontAwesome className="plus" name="plus" /></button>
+	          <button aria-controls="number"><i className="plus fa fa-plus"></i></button>
 	          <input role="alert" aria-live="assertive" readOnly="readonly" type="text" name="quantity" id="quantity" value="1"/>
-	          <button aria-controls="number"><FontAwesome className="minus" name="minus" /></button>
+	          <button aria-controls="number"><i className="fa fa-minus"></i></button>
 	        </div>
 
 	        <div className="cart-buttons">

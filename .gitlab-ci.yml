@@ -1,0 +1,20 @@
+
+image: node:6.3.0 # change to match your node version
+
+stages:
+  - test
+  - package
+
+test:
+  stage: test
+  script: npm test
+
+package:
+  stage: package
+  script: npm run build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+

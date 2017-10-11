@@ -1,5 +1,6 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome/lib';
+// import FontAwesome from 'react-fontawesome/lib';
+const FontAwesome = require('react-fontawesome')
 
 export default class Stars extends React.Component{
 // Current state is a read only star rating based on data input

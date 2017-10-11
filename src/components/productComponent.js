@@ -1,8 +1,10 @@
 // product detail component with image and desciptions (could break this down further)
 
 import React from 'react';
-import FontAwesome from 'react-fontawesome/lib';
+// import FontAwesome from 'react-fontawesome/lib';
 import Button from './button.js';
+const FontAwesome = require('react-fontawesome');
+
 
 export default class Product extends React.Component{
 	render(){

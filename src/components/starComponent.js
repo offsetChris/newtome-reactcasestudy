@@ -1,5 +1,4 @@
 import React from 'react';
-// import FontAwesome from 'react-fontawesome/lib';
 
 export default class Stars extends React.Component{
 // Current state is a read only star rating based on data input

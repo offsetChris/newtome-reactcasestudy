@@ -1,7 +1,6 @@
 // product detail component with image and desciptions (could break this down further)
 
 import React from 'react';
-// import FontAwesome from 'react-fontawesome/lib';
 import Button from './button.js';
 
 

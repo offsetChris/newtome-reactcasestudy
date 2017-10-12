@@ -20,6 +20,7 @@ Gulp sass watch and compile task runners.
 
 
 Further work needed:
+- [ ] Image Carosel - I did not have a chance to get this functional.
 - [ ] Browser compatibility optimization (for the sake of the demo I built this for the latest version of Chrome and have not focused time on backwards compatibility at this point.)
 - [ ] Break down components further for more modularity (comments etc need to be broken into exported components still)
 - [ ] Simplify and optimize functions (use conditional rendering etc)

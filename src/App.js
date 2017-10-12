@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import './css/main.css';
 import './css/font-awesome.css';
 import Stars from './components/starComponent.js';
-// import Button from './components/button.js';
-import Product from './components/productComponent.js';
-// import FontAwesome from 'react-fontawesome';
+import Product from './components/product.js';
 import appdata from './api/item-data.json';
 
 // components to break apart:
-// CatalogEntryView contains entirety of app
-//  CustomerReview displays and filters comments best/worst
-// product images
+// product images/showcase
+// product carosel
+// review modal
+// reviews
+// overall review
+
 
 function Reviews(props){
   console.log(props.reviews)
@@ -80,12 +81,13 @@ function Comment(props){
         <h3>{props.heading}</h3>
         <p>{props.text}</p>
       </div>
-
+      {/* TEST: If Comment review renders correctly
+       the stars component will fill appropriate # or stars */}
       <Stars rating={props.rating} />
 
       <h4>{props.title}</h4>
       <p>{props.description}</p>
-      <p className="comment-date">{props.user} {props.date}</p>
+      <p className="comment-meta"><span className="user-name">{props.user}</span> {props.date}</p>
     </div>
   );
 }
@@ -101,7 +103,7 @@ class App extends Component {
       <div className="app">
         <Product catalog={catalog} />
 
-      {/* If reviews data was passed, render reviews component with data */}
+      {/*TEST: If reviews data was passed, render reviews component with data */}
         <Reviews reviews={reviews} />
         
       </div>

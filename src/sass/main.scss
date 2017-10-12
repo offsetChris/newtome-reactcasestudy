@@ -5,13 +5,6 @@
 
 @import "config";
 
-
-// Primary colors
-
-// Secondary colors
-
-// Typography
-
 *{
 	box-sizing:border-box;
 }
@@ -34,7 +27,7 @@ a{
 	}
 }
 
-// components
+// Sass components
 @import "components/app";
 @import "components/stars";
 @import "components/reviews";

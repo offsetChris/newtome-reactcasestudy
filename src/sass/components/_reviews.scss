@@ -70,5 +70,12 @@
 		color:$grey-med;
 		line-height:18px;
 	}
+	.comment-meta{
+		margin:5px 0px;
+
+		.user-name{
+			color:$blue-med;
+		}
+	}
 	
 }

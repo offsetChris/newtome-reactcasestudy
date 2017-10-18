@@ -6,16 +6,10 @@ import Stars from './components/starComponent.js';
 import Product from './components/product.js';
 import appdata from './api/item-data.json';
 
-// components to break apart:
-// product images/showcase
-// product carosel
-// review modal
-// reviews
-// overall review
 
 
+// Reviews should be an export component.
 function Reviews(props){
-  console.log(props.reviews)
   const pro = props.reviews.Pro[0];
   const con = props.reviews.Con[0];
   
@@ -30,8 +24,7 @@ function Reviews(props){
       <div className="comment-container">
         {/* TEST: If Comment props are passed correctly, 
       render Pro and Con comments in comment-container with data */}
-        {/* TODO: Split out heading from comment so comment is more reusable. 
-        Or conditionally hide/show the header if props exist*/}
+        
         <Comment 
           heading="Pro" 
           text="most helpful 4-5 star review"
@@ -53,6 +46,7 @@ function Reviews(props){
   )
 }
 
+// OverallReview review should be an export component
 function OverallReview(props){
   return (
     <div className="overall-review">
@@ -71,9 +65,8 @@ function OverallReview(props){
   )
 }
 
-
+// Comment should be an export component
 function Comment(props){
-
   return (
 
     <div className="comment">
@@ -95,14 +88,12 @@ function Comment(props){
 class App extends Component {
 
   render() {
-    console.log(appdata);
+    // console.log(appdata);
     const catalog = appdata.CatalogEntryView[0];
     const reviews = catalog.CustomerReview[0];
-    
     return (
       <div className="app">
         <Product catalog={catalog} />
-
       {/*TEST: If reviews data was passed, render reviews component with data */}
         <Reviews reviews={reviews} />
         

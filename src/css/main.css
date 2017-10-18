@@ -1,4 +1,4 @@
-/* Modified on: Oct 11 2017 20:38 */
+/* Modified on: Oct 18 2017 16:09 */
 /* 	Make all edits to this file through the scss files 
 	in the git repository */
 * {
@@ -130,27 +130,6 @@ a:hover, a:focus {
 
 .comment .comment-meta .user-name {
   color: #0066cc;
-}
-
-.image-viewer--thumbnails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-viewer--thumbnails img {
-  height: 20px;
-  width: 30px;
-  display: inline;
-  margin: 5px;
-}
-
-.image-viewer--thumbnails a {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
 }
 
 .product {
@@ -435,4 +414,46 @@ a:hover, a:focus {
 .button--grey:hover, .button--grey:focus {
   background: #ddd;
   text-decoration: none;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .left-arrow, .carousel .right-arrow {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+.carousel .left-arrow i, .carousel .right-arrow i {
+  vertical-align: -15%;
+}
+
+.carousel ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.carousel .carousel__image {
+  margin: 10px;
+  border: 1px solid transparent;
+}
+
+.carousel .carousel__image-active {
+  border-color: #333;
+}
+
+.carousel .carousel__image img {
+  height: 20px;
+  width: 20px;
 }

@@ -1,66 +1,19 @@
-// product detail component with image and desciptions (could break this down further)
+// product detail component with image and desciptions 
+// (could break this down into smaller components further)
 
 import React from 'react';
 import Button from './button.js';
+import Carousel from './carousel.js';
 
-// function CheckChannel(props){
-// 	// const cartbtn = <Button type="button--primary" href="target.com" text="Add to cart" />;
-// 	// const storebtn =<Button type="button--secondary" href="target.com" text="Pick up in store"/>;
-// 	var buttons=[];
-// 	var cartbtn = false;
-// 	var storebtn = false;
 
-// 	switch(props.channelCode){
-// 		case 0:
-// 			cartbtn=true;
-// 			storebtn=true;
-// 			break
-// 		case 1:
-// 			cartbtn = true;
-// 			break;
-// 		case 2:
-// 			storebtn=true;
-// 			break;
-// 		default:
-// 			cartbtn=false;
-// 			storebtn=false;
-// 	}
-// 	// {channelCode === 0 &&
-// 	// 	<Button type="button--secondary" href="target.com" text="Pick up in store"/>
-// 	// 	<Button type="button--primary" href="target.com" text="Add to cart" />
-// 	// }
-// 	// {channelCode === 1 &&
-// 	// 	<Button type="button--primary" href="target.com" text="Add to cart" />
-// 	// }
-// 	// {channelCode == 2 && 
-// 	// 	<Button type="button--secondary" href="target.com" text="Pick up in store"/>
-// 	// }
-
-// 	return(
-// 		<div className="cart-buttons">
-// 			{storebtn === true &&
-// 			  <Button type="button--secondary" href="target.com" text="Pick up in store"/>
-// 			}
-// 			{console.log(buttons)}
-// 		</div>
-// 	)
-// }
 export default class Product extends React.Component{
 	render(){
 		const offers = this.props.catalog.Offers[0];
-		const images= this.props.catalog.Images[0];
+		const images= this.props.catalog.Images[0].AlternateImages;
 		const description = this.props.catalog.ItemDescription[0];
 		const promotions = this.props.catalog.Promotions;
 		const channelCode = this.props.catalog.purchasingChannelCode;
 		
-		// const offer = props.catalog.Offers[0];
-		// const returnPolicy = this.props.catalog.ReturnPolicy[0];
-
-		var altImgArray= [];
-		var dataImages = images.AlternateImages;
-		for (var i=0; i< dataImages.length; i++ ){
-			altImgArray.push(<img src={dataImages[i].image} key={i} alt="product title" />);
-		}
 
 		var promoArray = [];
 		for(var p=0; p< promotions.length; p++){
@@ -69,6 +22,7 @@ export default class Product extends React.Component{
 
 		var highlightArray = [];
 		for(var h=0; h< description.features.length; h++){
+			// remove any inline styling
 			var reg = /(<([^>]+)>)/ig;
 			var highlightText = description.features[h].replace(reg,'');
 			highlightArray.push(<li className="highlight-item" key={h}>{highlightText}</li>);
@@ -91,8 +45,8 @@ export default class Product extends React.Component{
 				cartbtn=false;
 				storebtn=false;
 		}
-		console.log(channelCode);
-		console.log(cartbtn);
+		// console.log(channelCode);
+		// console.log(cartbtn);
 		
 
   	return (
@@ -100,16 +54,8 @@ export default class Product extends React.Component{
 	      
 	      <div className="product-showcase">
 	        <h1 className="product-title">{this.props.catalog.title}</h1>
-	        {/* Image display and thumbnails should be in a separate component */}
-	        <img src={images.PrimaryImage[0].image} className="image-viewer" alt="product title" />
-	        <a className="zoom">
-	          <i className="zoom-icon fa fa-search-plus"></i>
-	        view larger</a>
-	        <div className="image-viewer--thumbnails">
-	          <a><i className="left-arrow fa fa-angle-left"></i></a>
-	          {altImgArray}
-	          <a><i className="right-arrow fa fa-angle-right"></i></a>
-	        </div>
+	        {/* Carousel component contains thumnail images and showcase image */}
+	        <Carousel images={images} />
 	      </div>
 
 	      <div className="product-info">
